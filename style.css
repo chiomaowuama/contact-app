@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 /* dark grey: #2A4144 */
-/* medium grey: #862A5 */
+/* medium grey: #86A2A5 */
 /* green :#0C7D69 */
 /* for errors: #D94747 */
 
@@ -21,10 +21,38 @@ body {
 }
 .the-form {
   border: 2px solid green;
-  width: 80%;
+  width: 70%;
   background-color: white;
+  padding: 5% 3%;
 
   /* margin: auto auto; */
+}
+.names {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1rem;
+}
+.name input {
+  padding: 5% 0;
+  border: 1px solid #86a2a5;
+  box-shadow: 1px 1px 2px #86a2a5;
+  border-radius: 10px;
+  outline-style: solid;
+  outline: #0c7d69;
+}
+.name input:hover {
+  /* border: 1px solid #0c7d69; */
+  outline-style: 1px solid;
+  outline-color: #0c7d69;
+  /* outline: #0c7d69; */
 }
 h1 {
   color: green;
