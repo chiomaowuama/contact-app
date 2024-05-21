@@ -1,7 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+/* dark grey: #2A4144 */
+/* medium grey: #862A5 */
+/* green :#0C7D69 */
+/* for errors: #D94747 */
+
 * {
   margin: 0%;
   padding: 0%;
+}
+body {
+  background-color: #e0f1e8;
+}
+.the-screen {
+  border: 2px solid green;
+  background-color: #e0f1e8;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.the-form {
+  border: 2px solid green;
+  width: 80%;
+  background-color: white;
+
+  /* margin: auto auto; */
 }
 h1 {
   color: green;
