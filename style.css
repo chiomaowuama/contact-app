@@ -18,6 +18,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8% 0%;
 }
 .the-form {
   border: 2px solid green;
@@ -178,4 +179,25 @@ body {
   border-radius: 10px;
   outline-style: solid;
   outline: #0c7d69;
+}
+.the-button {
+  /* background-color: #0c7d69; */
+  /* padding: 3% 0; */
+  /* border: none; */
+  /* border-radius: 10px; */
+}
+.the-button button {
+  background-color: #0c7d69;
+  border: 2px solid red;
+  width: 100%;
+  padding: 2% 0;
+  border: none;
+  border-radius: 10px;
+  font-family: "Karla";
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.the-button button:hover {
+  background-color: #035849;
 }

@@ -8,15 +8,17 @@
   </head>
   <body>
     <div class="the-screen">
-      <form class="the-form">
+      <!-- onclick="verify()" -->
+      <form class="the-form" action="#" onsubmit="verify(event)">
         <div class="names">
           <div class="name">
             <label for="">First name <span>&#42;</span></label>
-            <input type="text" />
+            <input type="text" id="fname" min="3" max="12" />
+            <span id="errormgs"></span>
           </div>
           <div class="name">
             <label for="">Last Name <span>&#42;</span></label>
-            <input type="text" />
+            <input type="text" id="sname" min="3" max="12" />
           </div>
         </div>
         <div class="emails">
@@ -45,6 +47,13 @@
         <div class="Message">
           <label for="">Message<span>&#42;</span></label>
           <textarea name="" id="" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+          <input type="checkbox" name="" id="" />
+          <label for=""> I concent to being contacted by the Team</label>
+        </div>
+        <div class="the-button">
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>
