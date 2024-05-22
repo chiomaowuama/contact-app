@@ -28,4 +28,6 @@ function verify(event) {
     }
   }
   //   Email verification
+  //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   return emailRegex.test(email);
 }
