@@ -3,12 +3,13 @@ function verify(event) {
   let Fname = document.getElementById("fname").value;
   let Sname = document.getElementById("sname").value;
   let Email = document.getElementById("email").value;
-  //   let Rgeneral = document.getElementById("general");
+  let messages = document.getElementById("the-messages").value;
   //   let Rsupport = document.getElementById("support");
   let Errormgs = document.getElementById("errormgs");
   let Errormg = document.getElementById("errormg");
   let Emailerror = document.getElementById("emailerror");
   let Radioerror = document.getElementById("radioerror");
+  //   let message = document.getElementById("message");
   // firstname verification
   const regex = /^[A-Za-z]+$/;
   if (Fname === "" || Fname == null) {
@@ -46,8 +47,17 @@ function verify(event) {
   const selectedRadio = document.querySelector(
     'input[name="typesupport"]:checked'
   )?.value;
-  console.log(selectedRadio);
   if (!selectedRadio) {
     Radioerror.innerHTML = "pick an option";
   }
+  //   the messages
+  console.log(messages);
+  if (messages === "" || messages == null) {
+    message.innerHTML = "please include a message";
+  }
+  //   if (messages == "" || messages == null) {
+  //     message.innerHTML = "please include a message";
+  //   } else {
+  //     message.innerHTML = " ";
+  //   }
 }
