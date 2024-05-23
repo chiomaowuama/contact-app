@@ -75,4 +75,10 @@ function verify(event) {
     consenttext.innerText = "I hereby concent";
     result.concent = consent;
   }
+
+  if (!result) {
+    alert("Submitted");
+  } else {
+    alert("not submitted");
+  }
 }
