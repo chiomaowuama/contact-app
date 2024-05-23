@@ -4,14 +4,13 @@ function verify(event) {
   let Sname = document.getElementById("sname").value;
   let Email = document.getElementById("email").value;
   let messages = document.getElementById("the-messages")?.value;
-  //   let Rsupport = document.getElementById("support");
   let Errormgs = document.getElementById("errormgs");
   let Errormg = document.getElementById("errormg");
   let Emailerror = document.getElementById("emailerror");
   let Radioerror = document.getElementById("radioerror");
   let message = document.getElementById("message");
   let result = [];
-  console.log(result);
+
   // firstname verification
   const regex = /^[A-Za-z]+$/;
   if (Fname === "" || Fname == null) {
@@ -22,7 +21,6 @@ function verify(event) {
     } else {
       Errormgs.innerHTML = "";
       result.firstname = Fname;
-      console.log(Fname);
     }
   }
   // surnname verification
@@ -70,7 +68,6 @@ function verify(event) {
   )?.value;
   const consents = document.getElementById("concents");
   if (!consent) {
-    console.log("none");
     consents.innerHTML = " please give concent";
   } else {
     result.concent = consent;
