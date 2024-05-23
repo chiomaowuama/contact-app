@@ -404,12 +404,12 @@ body {
     background-color: #0c7d69;
     border: 2px solid red;
     width: 100%;
-    padding: 2% 0;
+    padding: 5% 0;
     border: none;
     border-radius: 10px;
     font-family: "Karla";
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
     cursor: pointer;
   }
