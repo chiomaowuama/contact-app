@@ -3,11 +3,12 @@ function verify(event) {
   let Fname = document.getElementById("fname").value;
   let Sname = document.getElementById("sname").value;
   let Email = document.getElementById("email").value;
-  let Rgeneral = document.getElementById("general");
-  let Rsupport = document.getElementById("support");
+  //   let Rgeneral = document.getElementById("general");
+  //   let Rsupport = document.getElementById("support");
   let Errormgs = document.getElementById("errormgs");
   let Errormg = document.getElementById("errormg");
   let Emailerror = document.getElementById("emailerror");
+  let Radioerror = document.getElementById("radioerror");
   // firstname verification
   const regex = /^[A-Za-z]+$/;
   if (Fname === "" || Fname == null) {
@@ -41,4 +42,12 @@ function verify(event) {
     }
   }
   //   radio button
+  //   const selected = document.getElementsByName("typesupport").values;
+  const selectedRadio = document.querySelector(
+    'input[name="typesupport"]:checked'
+  )?.value;
+  console.log(selectedRadio);
+  if (!selectedRadio) {
+    Radioerror.innerHTML = "pick an option";
+  }
 }
