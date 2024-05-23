@@ -10,9 +10,9 @@
 }
 body {
   background-color: #e0f1e8;
+  font-family: "Karla";
 }
 .the-screen {
-  border: 2px solid green;
   background-color: #e0f1e8;
   height: fit-content;
   display: flex;
@@ -21,13 +21,21 @@ body {
   padding: 8% 0%;
 }
 .the-form {
-  border: 2px solid green;
-  width: 70%;
+  width: 60%;
   background-color: white;
   padding: 5% 3%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border-radius: 20px;
+}
+.head-text {
+  font-size: 20px;
+  margin-bottom: 2%;
+}
+.the-form label {
+  text-transform: capitalize;
+  font-size: 17px;
 }
 .names {
   display: flex;
@@ -131,7 +139,7 @@ body {
   width: 18px;
   background-color: #eee;
   border-radius: 50%;
-  border: 2px solid green;
+  border: 2px solid #86a2a5;
 }
 
 /* On mouse-over, add a grey background color */
@@ -180,11 +188,11 @@ body {
   outline-style: solid;
   outline: #0c7d69;
 }
-.the-button {
-  /* background-color: #0c7d69; */
-  /* padding: 3% 0; */
-  /* border: none; */
-  /* border-radius: 10px; */
+.consent-div {
+  margin: 2% 0;
+}
+.errorspan {
+  color: #d94747;
 }
 .the-button button {
   background-color: #0c7d69;
@@ -197,7 +205,14 @@ body {
   color: white;
   font-size: 20px;
   font-weight: 600;
+  cursor: pointer;
 }
 .the-button button:hover {
   background-color: #035849;
+}
+/* the ipads */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+/* phones */
+@media only screen and (min-width: 200px) and (max-width: 767px) and (orientation: portrait) {
 }

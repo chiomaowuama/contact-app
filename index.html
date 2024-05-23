@@ -10,25 +10,28 @@
     <div class="the-screen">
       <!-- onclick="verify()" -->
       <form class="the-form" action="#" onsubmit="verify(event)">
+        <div class="head-text">
+          <h1>Contact Us</h1>
+        </div>
         <div class="names">
           <div class="name">
             <label for="">First name <span>&#42;</span></label>
             <input type="text" id="fname" min="3" max="12" />
-            <span id="errormgs"></span>
+            <span id="errormgs" class="errorspan"></span>
           </div>
           <div class="name">
             <label for="">Last Name <span>&#42;</span></label>
             <input type="text" id="sname" min="3" max="12" />
-            <span id="errormg"></span>
+            <span id="errormg" class="errorspan"></span>
           </div>
         </div>
         <div class="emails">
-          <label for="">Email</label>
+          <label for="">Email <span>&#42;</span></label>
           <input type="email" id="email" />
-          <span id="emailerror"></span>
+          <span id="emailerror" class="errorspan"></span>
         </div>
         <div class="div-querries">
-          <label for="">query type</label>
+          <label for="">query type<span>&#42;</span></label>
           <div class="the-querries">
             <div class="the-querry">
               <!-- checked="checked" -->
@@ -56,18 +59,18 @@
               </label>
             </div>
           </div>
-          <span id="radioerror"></span>
+          <span id="radioerror" class="errorspan"></span>
         </div>
         <div class="Message">
           <label for="">Message<span>&#42;</span></label>
           <textarea name="" id="the-messages" rows="4" cols="50"></textarea>
-          <span id="message"></span>
+          <span id="message" class="errorspan"></span>
         </div>
-        <div>
+        <div class="consent-div">
           <input type="checkbox" name="consent" id="consent" value="checked" />
           <label for=""> I concent to being contacted by the Team</label>
         </div>
-        <span id="concents"></span>
+        <span id="concents" class="errorspan"></span>
         <div class="the-button">
           <button type="submit">Submit</button>
         </div>
