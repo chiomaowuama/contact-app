@@ -17,7 +17,7 @@ function verify(event) {
     Errormgs.innerHTML = "please input firstname";
   } else {
     if (!regex.test(Fname)) {
-      Errormgs.innerHTML = "please Alphabets only";
+      Errormgs.innerHTML = "please Alphabets only and no space";
     } else {
       Errormgs.innerHTML = "";
       result.firstname = Fname;
@@ -63,6 +63,8 @@ function verify(event) {
     result.message = messages;
   }
   //   consent
+  const consenttext = document.getElementById("consent-text");
+  console.log(consenttext);
   const consent = document.querySelector(
     'input[name="consent"]:checked'
   )?.value;
@@ -70,6 +72,7 @@ function verify(event) {
   if (!consent) {
     consents.innerHTML = " please give concent";
   } else {
+    consenttext.innerText = "I hereby concent";
     result.concent = consent;
   }
 }
