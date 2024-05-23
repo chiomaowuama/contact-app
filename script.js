@@ -3,13 +3,15 @@ function verify(event) {
   let Fname = document.getElementById("fname").value;
   let Sname = document.getElementById("sname").value;
   let Email = document.getElementById("email").value;
-  let messages = document.getElementById("the-messages").value;
+  let messages = document.getElementById("the-messages")?.value;
   //   let Rsupport = document.getElementById("support");
   let Errormgs = document.getElementById("errormgs");
   let Errormg = document.getElementById("errormg");
   let Emailerror = document.getElementById("emailerror");
   let Radioerror = document.getElementById("radioerror");
-  //   let message = document.getElementById("message");
+  let message = document.getElementById("message");
+  let result = [];
+  console.log(result);
   // firstname verification
   const regex = /^[A-Za-z]+$/;
   if (Fname === "" || Fname == null) {
@@ -19,6 +21,8 @@ function verify(event) {
       Errormgs.innerHTML = "please Alphabets only";
     } else {
       Errormgs.innerHTML = "";
+      result.firstname = Fname;
+      console.log(Fname);
     }
   }
   // surnname verification
@@ -29,6 +33,7 @@ function verify(event) {
       Errormg.innerHTML = "please Alphabets only";
     } else {
       Errormg.innerHTML = "";
+      result.Surnname = Sname;
     }
   }
   //   Email verification
@@ -40,24 +45,34 @@ function verify(event) {
       Emailerror.innerHTML = "Email incorrect";
     } else {
       Emailerror.innerHTML = " ";
+      result.Email = Email;
     }
   }
   //   radio button
-  //   const selected = document.getElementsByName("typesupport").values;
   const selectedRadio = document.querySelector(
     'input[name="typesupport"]:checked'
   )?.value;
   if (!selectedRadio) {
     Radioerror.innerHTML = "pick an option";
+  } else {
+    result.radio = selectedRadio;
   }
   //   the messages
-  console.log(messages);
   if (messages === "" || messages == null) {
-    message.innerHTML = "please include a message";
+    message.innerHTML = "Message cant be empty";
+  } else {
+    message.innerHTML = "";
+    result.message = messages;
   }
-  //   if (messages == "" || messages == null) {
-  //     message.innerHTML = "please include a message";
-  //   } else {
-  //     message.innerHTML = " ";
-  //   }
+  //   consent
+  const consent = document.querySelector(
+    'input[name="consent"]:checked'
+  )?.value;
+  const consents = document.getElementById("concents");
+  if (!consent) {
+    console.log("none");
+    consents.innerHTML = " please give concent";
+  } else {
+    result.concent = consent;
+  }
 }
